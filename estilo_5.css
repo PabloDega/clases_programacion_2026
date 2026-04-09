@@ -1,0 +1,71 @@
+#agrupado_p, 
+#agrupado_div, 
+#agrupado_a{
+    color: pink;
+}
+
+#div_descendente{
+    color: orange;
+}
+#div_descendente p span{
+    color: red;
+}
+#div_descendente p{
+    color: green;
+}
+
+.color-primario{
+    color: orange;
+}
+.color-secundario{
+    color: red;
+}
+.fondo-primario{
+    background-color: orange;
+}
+.texto-grande{
+    font-size: x-large;
+}
+.texto-chico{
+    font-size: small;
+}
+
+.btn{
+    background-color: blue;
+    color: white;
+    font-weight: 600;
+    padding: 10px;
+    display: inline-block;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.4s;
+}
+.btn:hover{
+    background-color: red;
+}
+
+.btn:active{
+    color: red;
+    background-color: white;
+}
+
+#cajitas span{
+    width: 50px;
+    height: 50px;
+    background-color: red;
+    display: inline-block;
+    margin: 10px;
+    border: 2px solid black;
+}
+
+#cajitas span:first-child{
+    background-color: green;
+}
+
+#cajitas span:last-child{
+    background-color: blue;
+}
+
+#cajitas span:nth-child(even){
+    background-color: black;
+}
