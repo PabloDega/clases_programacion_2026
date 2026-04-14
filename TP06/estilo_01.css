@@ -1,0 +1,32 @@
+.caja{
+    padding: 16px;
+    width: 500px;
+    margin-bottom: 16px;
+}
+body{
+    background-color: lightpink;
+}
+#coloresSemanticos{
+    background-color: midnightblue;
+    color: white;
+    border: solid 5px darkred;
+    outline: solid 5px darkgreen;
+    outline-offset: 4px;
+}
+#coloresRGB{
+    background-color: rgb(149, 26, 231);
+    color: rgb(229, 255, 0);
+}
+#coloresRGBA{
+    background-color: rgba(2, 146, 28, 0.079);
+    color: rgba(0, 63, 35, 0.399);
+}
+/* 
+rgb(0,0,0)
+rgb(51, 51, 51)
+rgb(255, 255, 255)
+ */
+#coloresHexadecimales{
+    background-color: #23a05f;
+    color: #0048ff;
+}
