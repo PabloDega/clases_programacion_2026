@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es-AR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formularios HTML</title>
+    <link rel="stylesheet" href="css/estilo.css">
+</head>
+<body>
+    <div id="cont">
+        <header>
+            <h1>Formulario de contacto</h1>
+        </header>
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">Nosotros</a>
+            <a href="#">Productos</a>
+            <a href="#">Contactos</a>
+        </nav>
+        <form action="" method="get">
+            <label for="nombre">Nombre</label>
+            <input type="text" id="nombre" name="nombre" required placeholder="Ingrese su nombre">
+            <label for="apellido">Apellido</label>
+            <input type="text" id="apellido" name="apellido" required placeholder="Ingrese su apellido">
+            <label for="dni">DNI</label>
+            <input type="text" id="dni" name="dni" minlength="7" maxlength="8">
+            <label for="email">Correo</label>
+            <input type="email" name="email" id="email">
+            <label for="telefono">Telefono</label>
+            <input type="tel" name="telefono" id="telefono" value="+54911">
+            <label for="nacimiento">Fecha de nacimiento</label>
+            <input type="date" name="nacimiento" id="nacimiento">
+            <label for="file">Adjuntar</label>
+            <input type="file" name="file" id="file">
+
+            <span>
+                <h2>Genero</h2>
+                <input type="radio" name="genero" id="masc" value="masculino">
+                <label for="masc">Masculino</label><br>
+                <input type="radio" name="genero" id="fem" value="femenino">
+                <label for="fem">Femenino</label><br>
+                <input type="radio" name="genero" id="nb" value="noBinario">
+                <label for="nb">No Binario</label><br>
+                <input type="radio" name="genero" id="nr" value="noResponde">
+                <label for="nr">Prefiero no responder</label><br>
+            </span>
+
+            <label for="nacionalidad">Nacionalidad</label>
+            <select name="nacionalidad" id="nacionalidad">
+                <option value="arg">Argentina</option>
+                <option value="ury">Uruguay</option>
+                <option value="pry">Paraguay</option>
+                <option value="" selected disabled>-Seleccione de la lista-</option>
+            </select>
+
+            <span>
+                <h2>Cursos de su interes</h2>
+                <input type="checkbox" name="pw" id="pw" value="programacionWeb">
+                <label for="pw">Programación Web</label><br>
+                <input type="checkbox" name="ls" id="ls" value="liquidacionDeSueldos">
+                <label for="ls">Liquidación de sueldos</label><br>
+                <input type="checkbox" name="i3d" id="i3d" value="impresion3D">
+                <label for="i3d">Impresión 3D</label><br>
+            </span>
+
+            <h2>Comentarios</h2>
+            <textarea name="comentario" id="comentario" cols="35" rows="10" maxlength="256" placeholder="Máximo de 256 caracteres"></textarea>
+
+            <br>
+            <button type="submit">Enviar</button>
+            <button type="reset">Limpiar</button>
+        </form>
+    </div>
+</body>
+</html>
