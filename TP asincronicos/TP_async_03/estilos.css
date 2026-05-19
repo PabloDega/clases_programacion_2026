@@ -1,0 +1,128 @@
+body{
+    margin:0;
+    font-family:Arial, Helvetica, sans-serif;
+    background:#0f172a;
+    color:#e2e8f0;
+}
+
+/* HEADER */
+header{
+    background:#020617;
+    padding:20px;
+    border-bottom:3px solid #22c55e;
+}
+
+header h1{
+    margin:0;
+    color:#22c55e;
+}
+
+header nav{
+    margin-top:10px;
+}
+
+header nav a{
+    color:#94a3b8;
+    margin-right:15px;
+    text-decoration:none;
+    font-weight: 600;
+    transition: 0.5s;
+}
+header nav a:hover{
+    color:#22c55e;
+}
+
+/* PANEL GENERAL */
+main{
+    width:800px;
+    margin:20px auto;
+}
+
+/* PERFIL */
+.card.destacado{
+    background:#020617;
+    padding:20px;
+    border-left:6px solid #22c55e;
+    margin-bottom:25px;
+}
+
+.card p{
+    margin:5px 0;
+}
+
+.nivel{
+    color:#22c55e;
+    font-weight:bold;
+}
+
+/* ESTADÍSTICAS */
+#estadisticas{
+    margin-bottom:30px;
+}
+
+#estadisticas .stats{
+    text-align:center;
+}
+
+#estadisticas .stat{
+    display:inline-block;
+    width:25%;
+    background:#020617;
+    margin:10px;
+    padding:15px;
+    border:1px solid #334155;
+}
+
+#estadisticas .stat p:first-child{
+    font-size:14px;
+    color:#94a3b8;
+}
+
+#estadisticas .stat p:last-child{
+    font-size:24px;
+    color:#22c55e;
+}
+
+/* LOGROS */
+#logros{
+    background:#020617;
+    padding:20px;
+    border-top:3px solid #22c55e;
+}
+
+#logros h2{
+    margin-top:0;
+}
+
+#logros .lista-logros{
+    text-align:center;
+}
+
+#logros .logro{
+    display:inline-block;
+    background:#0f172a;
+    border:1px solid #334155;
+    padding:15px;
+    margin:10px;
+    width:25%;
+    cursor: pointer;
+}
+
+#logros .logro p{
+    margin:0;
+}
+
+/* HOVER LOGROS */
+#logros .logro:hover{
+    background:#1e293b;
+}
+
+/* FOOTER */
+footer{
+    background:#020617;
+    text-align:center;
+    padding:15px;
+    margin-top:30px;
+    border-top:2px solid #22c55e;
+}
+

@@ -1,0 +1,146 @@
+body{
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin:0;
+    background:#eae7e1;
+}
+
+/* HEADER tipo revista */
+header{
+    background:#8b0000;
+    color:white;
+    padding:30px 20px;
+    border-bottom:5px solid #400000;
+}
+
+header h1{
+    margin:0;
+    letter-spacing:2px;
+}
+
+header nav{
+    margin-top:10px;
+}
+
+header nav a{
+    color:#ffdede;
+    margin-right:20px;
+    text-decoration:none;
+    font-size:14px;
+}
+
+/* CONTENIDO */
+main{
+    width:90%;
+    margin:20px auto;
+}
+
+/* NOTICIA PRINCIPAL estilo portada */
+.noticia.destacada{
+    background:#fff8dc;
+    padding:25px;
+    border-left:10px solid #8b0000;
+    margin-bottom:25px;
+}
+
+.noticia.destacada h2{
+    margin-top:0;
+    font-size:28px;
+}
+
+/* texto general */
+.noticia p{
+    color:#333;
+    line-height:1.5;
+}
+
+/* link destacado */
+.destacada a{
+    display:inline-block;
+    margin-top:10px;
+    background:#8b0000;
+    color:white;
+    padding:8px 15px;
+    text-decoration:none;
+}
+
+/* SECCIÓN SECUNDARIA */
+#secundarias{
+    margin-bottom:30px;
+}
+
+/* filas centradas */
+#secundarias .fila{
+    text-align:center;
+}
+
+/* tarjetas tipo revista */
+#secundarias .fila .noticia{
+    display:inline-block;
+    width:40%;
+    vertical-align:top;
+    background:white;
+    margin:10px;
+    padding:15px;
+    border:1px solid #ccc;
+}
+
+#secundarias .noticia h3{
+    margin-top:0;
+    color:#8b0000;
+}
+
+/* links secundarios */
+#secundarias .noticia a{
+    color:#8b0000;
+    text-decoration:none;
+    font-size:14px;
+}
+
+/* hover visual */
+#secundarias .noticia:hover{
+    background:#f9f9f9;
+}
+
+/* LISTA estilo columna editorial */
+#lista{
+    background:#ffffff;
+    padding:20px;
+    border-top:3px solid #8b0000;
+}
+
+#lista h2{
+    margin-top:0;
+}
+
+/* items tipo lista */
+#lista .item{
+    border-bottom:1px solid #ddd;
+    padding:10px 0;
+}
+
+/* links tipo titular */
+#lista .item a{
+    text-decoration:none;
+    color:#222;
+    font-weight:bold;
+}
+
+/* hover */
+#lista .item a:hover{
+    color:#8b0000;
+}
+
+/* primer item destacado */
+#lista .item:first-child{
+    background:#edadad;
+    padding:12px;
+}
+
+/* FOOTER */
+footer{
+    background:#400000;
+    color:white;
+    text-align:center;
+    padding:20px;
+    margin-top:30px;
+}
