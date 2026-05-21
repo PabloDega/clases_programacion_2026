@@ -1,0 +1,43 @@
+#cajas div{
+    width: 200px;
+    height: 100px;
+    background-color: red;
+    border: 2px solid black;
+    font-size: 3em;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#cajas{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1em;
+}
+#cajas #caja4{
+    background-color: blue;
+    flex-grow: 1;
+    order: -20;
+}
+#cajas #caja2{
+    background-color: darkslategrey;
+    flex-grow: 2;
+    order: -10;
+}
+nav{
+    background-color: orange;
+    display: flex;
+    flex-direction: row;
+}
+nav a{
+    text-decoration: none;
+    color: inherit;
+    padding: 0.7em;
+    display: flex;
+    flex-grow: 1;
+    justify-content: center;
+}
+nav a:hover{
+    background-color: darkorange;
+}

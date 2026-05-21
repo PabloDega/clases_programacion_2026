@@ -1,0 +1,52 @@
+#caja1,
+#caja2{
+    background-color: aqua;
+    font-size: 2em;
+    padding: 1em;
+}
+@media(width < 800px){
+    #caja1{
+        background-color: lightpink;
+    }
+}
+@media(width < 700px){
+    #caja2{
+        display: none;
+    }
+}
+
+nav{
+    display: flex;
+    font-size: 2.5em;
+    background-color: aqua;
+}
+nav a{
+    text-decoration: none;
+    color: inherit;
+    padding: 0.7em;
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+}
+nav a:hover{
+    background-color: rgb(35, 126, 157);
+}
+nav #hamb{
+    display: none;
+}
+@media(width < 825px){
+    nav{
+        flex-direction: column;
+    }
+}
+@media(width < 500px){
+    nav a{
+        display: none;
+    }
+    nav #hamb{
+        display: flex;
+        font-size: 2em;
+        justify-content: end;
+        cursor: pointer;
+    }
+}

@@ -1,0 +1,125 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: rgb(22, 24, 30);
+}
+
+#contenedor {
+    background-color: rgb(243, 243, 243);
+    max-width: 800px;
+    margin: 0 auto;
+    min-height: 100vh;
+}
+
+header img {
+    width: 300px;
+}
+
+header {
+    text-align: center;
+}
+
+header h1 {
+    font-size: 2.5em;
+}
+
+nav {
+    background-color: rgb(100, 170, 205);
+    margin-top: 1em;
+    text-align: center;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    padding: 0.7em;
+    display: inline-block;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    background-color: rgb(39, 110, 145);
+}
+
+main {
+    font-size: 0;
+}
+
+main div {
+    width: 70%;
+    display: inline-block;
+    font-size: 1rem;
+    padding: 0 1.5em;
+}
+
+main img {
+    width: 30%;
+}
+
+#accion {
+    background-color: rgb(100, 170, 205);
+    color: white;
+    text-align: center;
+    padding: 0.5em;
+    font-size: 2em;
+    margin-top: 1em;
+}
+
+#accion a {
+    text-decoration: none;
+    color: inherit;
+    background-color: rgb(39, 110, 145);
+    padding: 0.3em;
+    display: inline-block;
+    transition: 0.3s;
+}
+
+#accion a:hover {
+    transform: scale(105%);
+}
+
+#test {
+    font-size: 0;
+}
+
+#test .card-test {
+    width: calc(100%/3);
+    display: inline-block;
+    font-size: 1rem;
+    padding: 1em;
+    text-align: center;
+    vertical-align: top;
+}
+
+#test .card-test img {
+    width: 50%;
+    display: block;
+    margin: 0 auto;
+    border-radius: 50%;
+    filter: grayscale(1);
+    transition: 0.3s;
+}
+
+#test .card-test:hover img {
+    filter: grayscale(0);
+}
+
+#test .card-test span q {
+    font-size: 1.3em;
+    font-style: italic;
+}
+
+#seccionTxt {
+    padding: 1em;
+}
+
+footer {
+    background-color: rgb(100, 170, 205);
+    padding: 1em;
+    text-align: center;
+}
