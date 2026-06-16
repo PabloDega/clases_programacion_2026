@@ -9,7 +9,7 @@ const ejemplo2 = ["texto", 22, true, undefined, null, [1, 2, 3, "texto2"]];
 const numeros = [2, 9, 11, 5, 78, 123];
 console.log(numeros);
 
-console.log(numeros[2]);
+console.log(numeros[4]);
 
 // Agregar un dato
 numeros.push(99);
