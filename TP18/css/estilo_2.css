@@ -1,0 +1,10 @@
+#eventosMouse{
+    width: 500px;
+    height: 500px;
+    background-color: orange;
+    display: flex;
+    font-size: 2em;
+    color: white;
+    padding: 1em;
+    box-sizing: border-box;
+}
