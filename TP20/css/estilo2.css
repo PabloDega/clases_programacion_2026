@@ -1,0 +1,27 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    align-items: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color: darkmagenta;
+}
+.caja{
+    background-color: white;
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+}
+.caja span{
+    display: flex;
+    gap: 0.5em;
+}
+input, button{
+    padding: 0.3em;
+}
