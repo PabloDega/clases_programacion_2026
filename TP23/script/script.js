@@ -7,11 +7,22 @@ function mostrarCursos(){
             <div class="btn" data-curso=${curso.id}>Ver detalles</div>
         </div>`;
         document.querySelector("#cursos").innerHTML += html;
+    });
+    // dar evento a btns
+    document
+    .querySelectorAll("#cursos .btn")
+    .forEach((btn) => {
+        btn.addEventListener("click", (e) => {
+            console.log("click en boton de curso: " + e.target.dataset.curso);
+            mostrarAlumnos(e.target.dataset.curso);
+        })
     })
 }
 
-function mostrarAlumnos(){}
+function mostrarAlumnos(idCurso){}
 
 //mostrarCursos();
 
-mostrarCursos();
+window.onload = () => {
+    mostrarCursos();
+}
