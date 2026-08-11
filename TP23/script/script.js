@@ -19,7 +19,25 @@ function mostrarCursos(){
     })
 }
 
-function mostrarAlumnos(idCurso){}
+function mostrarAlumnos(idCurso){
+    document.querySelector("#detalles").style.display = "flex";
+    const cursoActual = cursos.find(curso => curso.id == idCurso);
+    //console.log(cursoActual);
+    document.querySelector("#detalles > h1").textContent = `Detalles del curso ${cursoActual.nombre}`;
+    document.querySelector("#detalles > span").textContent = `Cantida de alumnos: ${cursoActual.alumnos.length}`;
+    // Crear tarjetas de alumnos
+    let htmlCardsAlumnos = "";
+    cursoActual.alumnos.forEach((idAlumno) => {
+        const alumnoActual = alumnos.find(alumno => alumno.id == idAlumno);
+        htmlCardsAlumnos += `<div class="card alumno">
+            <span>Nombre: ${alumnoActual.nombre}</span>
+            <span>Apellido: ${alumnoActual.apellido}</span>
+            <span>DNI: ${alumnoActual.dni}</span>
+            <span>Localidad: ${alumnoActual.localidad}</span>
+        </div>`;
+    });
+    document.querySelector("#listaAlumnos").innerHTML = htmlCardsAlumnos;
+}
 
 //mostrarCursos();
 
