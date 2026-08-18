@@ -58,3 +58,9 @@ input{
     border-radius: 0.3em;
     border: none;
 }
+.pendiente{
+    background-color: orange;
+}
+.completada{
+    background-color: green;
+}
