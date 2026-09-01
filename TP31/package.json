@@ -1,0 +1,19 @@
+{
+  "name": "Servidor con express para clase 46",
+  "version": "2.1.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "curso",
+    "programacion"
+  ],
+  "author": "Pablo",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "express": "^5.2.1"
+  }
+}
