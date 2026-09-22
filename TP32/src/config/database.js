@@ -1,4 +1,4 @@
-import mysql from "mysql/promise"
+import mysql from "mysql2/promise"
 
 export const pool = mysql.createPool({
     host: process.env.DB_HOST,
@@ -9,4 +9,15 @@ export const pool = mysql.createPool({
     waitForConnections: true,
     connectionLimit: 10,
     queueLimit: 20,
-})
+});
+
+export const query = async (sql) => {
+    try {
+        const resp = await pool.query(sql);
+        //console.log(resp[0][0])
+        return resp;
+    } catch (error) {
+        console.error("Error en la query" + error.message);
+        throw new Error("Error en query a la BD");
+    }
+}
