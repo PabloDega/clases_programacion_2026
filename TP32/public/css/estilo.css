@@ -55,3 +55,19 @@ form{
 form input{
     padding: 0.3em;
 }
+.card{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+    background-color: var(--color-secundario);
+    padding: 1em;
+    width: 10em;
+    height: fit-content;
+    h2{
+        color: white;
+    }
+}
+.cardCont{
+    display: flex;
+    gap: 1em;
+}
