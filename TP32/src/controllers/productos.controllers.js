@@ -17,3 +17,18 @@ export const getProductos = async(req, res) => {
     }
     
 }
+
+export const crearProducto = async (req, res) => {
+    console.log("--> crearProducto en ejecucion");
+    try {
+        // crear vista
+        const vista = vistasProductos.crearProducto()
+        // enviar vista en respuesta
+        res.send(vista);
+        return;
+    } catch (error) {
+        console.log("Error en crearProducto", error.message);
+        res.status(503).send("Ups, ocurrio un error")
+        return;
+    }
+}

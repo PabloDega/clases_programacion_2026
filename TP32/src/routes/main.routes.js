@@ -6,4 +6,8 @@ import * as controllersProductos from "../controllers/productos.controllers.js";
 
 rutas.post("/login", middlewaresMain.validarLogin, controllersMain.loginPost);
 
-rutas.get("/productos", controllersProductos.getProductos)
+rutas.get("/productos", controllersProductos.getProductos);
+
+rutas.get("/panel", middlewaresMain.verificarLogin, controllersMain.getDashboard);
+
+rutas.get("/logout", controllersMain.logOut);

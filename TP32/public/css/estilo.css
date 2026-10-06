@@ -71,3 +71,17 @@ form input{
     display: flex;
     gap: 1em;
 }
+#usuario{
+    display: flex;
+    flex-direction: column;
+    gap: 0.3em;
+    font-size: 1rem;
+    align-items: center;
+    a{  color: white;
+        text-decoration: none;
+    }
+}
+header{
+    display: flex;
+    justify-content: space-between;
+}
