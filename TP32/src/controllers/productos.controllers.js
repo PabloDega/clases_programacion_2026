@@ -58,3 +58,36 @@ export const crearProductoPost = async (req, res) => {
         return;
     }
 }
+
+export const editarProducto = async (req, res) => {
+    console.log("--> editarProducto en ejecucion");
+    console.log(req.params.id);
+    try {
+        const id = parseInt(req.params.id);
+        if(isNaN(id) || id < 0){
+            res.status(400).send("Id invalido");
+            return;
+        }
+        const producto = await serviciosProductos.getProductoId(id);
+    } catch (error) {
+        console.log("Error en crearProductosPost", error.message);
+        res.status(503), send("Ups, ocurrio un error");
+        return;
+    }
+}
+
+export const editarProductoPost = async (req, res) => {
+    console.log("--> editarProductoPost en ejecucion");
+    console.log(req.params.id);
+    try {
+        const id = parseInt(req.params.id);
+        if(isNaN(id) || id < 0){
+            res.status(400).send("Id invalido");
+            return;
+        }
+    } catch (error) {
+        console.log("Error en crearProductosPost", error.message);
+        res.status(503), send("Ups, ocurrio un error");
+        return;
+    }
+}
