@@ -64,14 +64,21 @@ export const editarProducto = async (req, res) => {
     console.log(req.params.id);
     try {
         const id = parseInt(req.params.id);
-        if(isNaN(id) || id < 0){
+        if(isNaN(id) || id < 1){
             res.status(400).send("Id invalido");
             return;
         }
         const producto = await serviciosProductos.getProductoId(id);
+        if(producto === undefined){
+            res.status(400).send("Producto inexistente");
+            return;
+        }
+        const vista = vistasProductos.editarProducto(producto);
+        res.send(vista);
+        return;
     } catch (error) {
         console.log("Error en crearProductosPost", error.message);
-        res.status(503), send("Ups, ocurrio un error");
+        res.status(503).send("Ups, ocurrio un error");
         return;
     }
 }
@@ -79,15 +86,24 @@ export const editarProducto = async (req, res) => {
 export const editarProductoPost = async (req, res) => {
     console.log("--> editarProductoPost en ejecucion");
     console.log(req.params.id);
+    console.log(req.body);
     try {
         const id = parseInt(req.params.id);
-        if(isNaN(id) || id < 0){
+        if(isNaN(id) || id < 1){
             res.status(400).send("Id invalido");
             return;
         }
+        // validar req.body
+        const respuesta = await serviciosProductos.updateProducto(id, req.body);
+        if(respuesta[0].affectedRows != 1){
+            res.status(500).send("Ups, ocurrio un error");
+            return;
+        }
+        res.send("Datos actualizados <a href='/panel'>volver</a>");
+        return;
     } catch (error) {
         console.log("Error en crearProductosPost", error.message);
-        res.status(503), send("Ups, ocurrio un error");
+        res.status(503).send("Ups, ocurrio un error");
         return;
     }
 }

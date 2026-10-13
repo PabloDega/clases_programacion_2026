@@ -57,3 +57,41 @@ export const crearProducto = () => {
 </body>`;
     return vista;
 }
+
+
+export const editarProducto = (producto) => {
+     // crear la vista HTML
+    let vista = `<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home de mi empresa</title>
+    <link rel="stylesheet" href="/css/estilo.css">
+</head>
+<body>
+    <header>Home de mi empresa</header>
+    <nav>
+        <a href="/index.html">Home</a>
+        <a href="/productos">Productos</a>
+        <a href="/contactos.html">Contactos</a>
+        <a href="/panel">Panel</a>
+    </nav>
+    <main>
+        <form method="post" action="/productos/editar/${producto.id}">
+            <input type="text" name="descripcion" required value="${producto.descripcion}">
+            <input type="text" name="precio" value="${producto.precio}" required>
+            <div style="display: flex; gap: 1em;">
+                Eliminado: 
+                SI 
+                <input type="radio" name="eliminado" value="1" ${producto.eliminado == 1 ? "checked" : ""}>
+                NO 
+                <input type="radio" name="eliminado" value="0" ${producto.eliminado == 0 ? "checked" : ""}>
+            </div> 
+            <input type="submit" value="Editar">
+        </form>
+    </main>
+    <footer>
+        Creado por Pablo &copy;2026
+    </footer>
+</body>`;
+    return vista;
+}
