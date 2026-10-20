@@ -10,3 +10,7 @@ rutasProductos.post("/productos/crear", middlewaresMain.verificarLogin, controll
 rutasProductos.get("/productos/editar/:id", middlewaresMain.verificarLogin, controllersProductos.editarProducto);
 
 rutasProductos.post("/productos/editar/:id", middlewaresMain.verificarLogin, controllersProductos.editarProductoPost);
+
+rutasProductos.get("/productos/eliminar/:id", middlewaresMain.verificarLogin, controllersProductos.eliminarProducto);
+
+rutasProductos.get("/productos/lista", middlewaresMain.verificarLogin, controllersProductos.listaProductos);

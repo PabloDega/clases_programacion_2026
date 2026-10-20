@@ -38,6 +38,10 @@ nav a:hover{
 }
 main{
     flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    position: relative;
 }
 footer{
     background-color: var(--color-texto);
@@ -63,9 +67,16 @@ form input{
     padding: 1em;
     width: 10em;
     height: fit-content;
+    text-decoration: none;
+    color: inherit;
+    font-weight: 600;
     h2{
         color: white;
     }
+}
+.card:hover{
+    background-color: var(--color-primario);
+    color: var(--color-blanco);
 }
 .cardCont{
     display: flex;
@@ -84,4 +95,17 @@ form input{
 header{
     display: flex;
     justify-content: space-between;
+}
+.tablaProductos{
+    border-collapse: collapse;
+    width: 100%;
+}
+.tablaProductos th, 
+.tablaProductos td{
+    border: 1px solid black;
+    padding: 0.5em;
+}
+.tablaProductos th{
+    background-color: var(--color-primario);
+    color: var(--color-blanco);
 }

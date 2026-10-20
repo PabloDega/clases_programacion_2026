@@ -107,3 +107,43 @@ export const editarProductoPost = async (req, res) => {
         return;
     }
 }
+
+export const eliminarProducto = async (req, res) => {
+    console.log("--> eleminarProducto en ejecucion");
+    console.log(req.params.id);
+    try {
+        const id = parseInt(req.params.id);
+        if(isNaN(id) || id < 1){
+            res.status(400).send("Id invalido");
+            return;
+        }
+        const respuesta = await serviciosProductos.deleteProducto(id);
+        if(respuesta[0].affectedRows != 1){
+            res.status(500).send("Ups, ocurrio un error");
+            return;
+        }
+        res.send("Producto eliminado <a href='/panel'>volver<a/>");
+        return;
+    } catch (error) {
+        console.log("Error en eliminarProducto", error.message);
+        res.status(503).send("Ups, ocurrio un error");
+        return;
+    }
+}
+
+export const listaProductos = async (req, res) => {
+    console.log("--> listaProductos en ejecucion");
+    try {
+        // leer los productos de la BD (todos)
+        const productos = await serviciosProductos.getProductosTodos();
+        // con los productos crear la vista
+        const vista = vistasProductos.vistaProductosLista(productos[0]);
+        // enviar vista al usuario
+        res.send(vista);
+        return;
+    } catch (error) {
+        console.log("Error en listaProductos", error.message);
+        res.status(503).send("Ups, ocurrio un error");
+        return;
+    }
+}

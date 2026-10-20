@@ -19,13 +19,12 @@ export const mainDashboard = (user) => {
         <a href="index.html">Home</a>
         <a href="/productos">Productos</a>
         <a href="contactos.html">Contactos</a>
-        <a href="login.html">Login</a>
+        <a href="/panel">Panel</a>
     </nav>
     <main>
         <h1>Panel de control</h1>
         <div>Bienvenido ${user?.usuario || "usuario no logueado"}!</div>
-        <a href="/productos/crear">Crear producto</a>
-        <a href="#" id="editarProducto">Editar producto</a>
+        <a href="/productos/lista" class="card"> 📦 Productos</a>
     </main>
     <footer>
         Creado por Pablo &copy;2026
