@@ -19,11 +19,18 @@ export const vistaProductos = (productos) => {
             <h2>${producto.descripcion}</h2>
             <span>$${producto.precio}</span>
             <span>${producto.categoria}</span>
+            <span class="carritoProducto" data-descripcion="${producto.descripcion}" data-precio="${producto.precio}" data-id="${producto.id}">🛒</span>
         </div>`).join("")}
+        <div id="carritoIcono">
+            🛒
+            <span id="carritoIconoCantidad">0</span>
+        </div>
+        <div id="modalCarrito"></div>
     </main>
     <footer>
         Creado por Pablo &copy;2026
     </footer>
+    <script src="/script/carrito.js"></script>
 </body>`;
     return vista;
 }
