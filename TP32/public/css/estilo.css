@@ -84,7 +84,6 @@ form input{
     flex-direction: row;
     flex-wrap: wrap;
     align-content: flex-start;
-    align-items: stretch;
 }
 #usuario{
     display: flex;
@@ -113,6 +112,12 @@ header{
     background-color: var(--color-primario);
     color: var(--color-blanco);
 }
+.carritoProducto{
+    font-size: 2em;
+    cursor: pointer;
+    width: fit-content;
+}
+
 #carritoIcono{
     position: absolute;
     bottom: 3rem;
@@ -121,18 +126,34 @@ header{
     cursor: pointer;
 }
 #carritoIconoCantidad{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     position: absolute;
     left: 0;
     top: -1rem;
     font-size: 2rem;
     background-color: var(--color-primario);
     color: var(--color-blanco);
-    text-align: center;
     border-radius: 50%;
-    width: 2.2rem;
-    height: 2.2rem;
+    width: 2.5rem;
+    height: 2.5rem;
 }
-.carritoProducto{
-    font-size: 2em;
-    cursor: pointer;
+.screen{
+    background-color: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    z-index: 5;
+    top: 0;
+    left: 0;
+}
+.modal{
+    background-color: var(--color-blanco);
+    padding: 1em;
+    z-index: 10;
+    position: absolute;
+    width: 500px;
+    top: 5em;
+    left: calc(50vw - 250px);
 }

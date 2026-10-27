@@ -19,14 +19,17 @@ export const vistaProductos = (productos) => {
             <h2>${producto.descripcion}</h2>
             <span>$${producto.precio}</span>
             <span>${producto.categoria}</span>
-            <span class="carritoProducto" data-descripcion="${producto.descripcion}" data-precio="${producto.precio}" data-id="${producto.id}">🛒</span>
+            <span class="carritoProducto" 
+            data-id="${producto.id}" 
+            data-descripcion="${producto.descripcion}" 
+            data-precio="${producto.precio}">🛒</span>
         </div>`).join("")}
         <div id="carritoIcono">
             🛒
             <span id="carritoIconoCantidad">0</span>
         </div>
-        <div id="modalCarrito"></div>
     </main>
+    <div class="contModal"></div>
     <footer>
         Creado por Pablo &copy;2026
     </footer>
