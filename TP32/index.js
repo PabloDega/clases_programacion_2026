@@ -8,7 +8,7 @@ import { rateLimit } from "express-rate-limit";
 const app = express();
 
 const limitador = rateLimit({
-    windowMs: 10 * 60 * 1000,
+    windowMs: 10 * 60 * 1000, // 10 minutos
     limit: 300,
     standardHeaders: true,
     legacyHeaders: false,
@@ -21,6 +21,7 @@ app.use(express.static("public"));
 app.use(express.urlencoded({
     extended: false,
 }));
+app.use(express.json());
 app.use(session({
     secret: process.env.SESSION_SECRET,
     resave: false,

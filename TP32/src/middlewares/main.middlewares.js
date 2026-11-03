@@ -25,3 +25,10 @@ export const verificarLogin = (req, res, next) => {
     }
     next();
 }
+
+export const validarPedido = (req, res, next) => {
+    // validar body
+    console.log("--> Middleware de validacion de pedido en ejecucion");
+    console.log(req.body);
+    next();
+}

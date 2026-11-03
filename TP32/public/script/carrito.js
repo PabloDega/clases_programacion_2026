@@ -59,6 +59,8 @@ document.querySelector("#carritoIcono")
             })}</td>
         </tr>`).join("")}
     </table>
+    <input type="text" name="nombre" id="nombre" placeholder="Nombre" required>
+    <input type="text" name="contacto" id="contacto" placeholder="Contacto" required>
     <button id="btnCerrar">Cerrar</button>
     <button id="btnEnviar">Enviar</button>
   </div>
@@ -69,5 +71,28 @@ document.querySelector("#carritoIcono")
     document.querySelector(".contModal").innerHTML = "";
   });
   document.querySelector("#btnEnviar")
-  .addEventListener("click", () => {});
+  .addEventListener("click", async() => {
+    // validar
+    if(carrito.length === 0){return}
+    const nombre = document.querySelector("#nombre").value;
+    const contacto = document.querySelector("#contacto").value;
+    console.log(nombre, contacto);
+    if(nombre == "" || contacto == ""){return}
+    // enviar pedido con FETCH
+    try {
+    let respuesta = await fetch("/productos/pedido/api", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          nombre: nombre,
+          contacto: contacto,
+          producto: carrito
+        })
+      });
+      respuesta = await respuesta.json();
+      console.log(respuesta);
+    } catch (error) {
+      console.log("Error al enviar el pedido", error);
+    }
+  });
 })
