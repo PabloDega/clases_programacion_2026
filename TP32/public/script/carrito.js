@@ -66,17 +66,19 @@ document.querySelector("#carritoIcono")
   </div>
   <div class="screen"></div>`;
   document.querySelector(".contModal").innerHTML = modalHTML;
+
   document.querySelector("#btnCerrar")
   .addEventListener("click", () => {
     document.querySelector(".contModal").innerHTML = "";
   });
+
   document.querySelector("#btnEnviar")
   .addEventListener("click", async() => {
     // validar
     if(carrito.length === 0){return}
     const nombre = document.querySelector("#nombre").value;
     const contacto = document.querySelector("#contacto").value;
-    console.log(nombre, contacto);
+    //console.log(nombre, contacto);
     if(nombre == "" || contacto == ""){return}
     // enviar pedido con FETCH
     try {
@@ -86,7 +88,7 @@ document.querySelector("#carritoIcono")
         body: JSON.stringify({
           nombre: nombre,
           contacto: contacto,
-          producto: carrito
+          productos: carrito
         })
       });
       respuesta = await respuesta.json();

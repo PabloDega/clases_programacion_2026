@@ -150,9 +150,14 @@ export const listaProductos = async (req, res) => {
 
 export const postPedidos = async (req, res) => {
     console.log("--> controlador postPedidos en ejecucion");
-    console.log(req.body);
+    //console.log(req.body);
     try {
         // grabar el pedido en la BD
+        const respuesta = await serviciosProductos.crearPedido(req.body);
+        if(respuesta[0].affectedRows != 1){
+            res.status(500).send("Ups, ocurrio un error");
+            return;
+        }
         res.json({
             ok: true,
             mensaje: "Pedido recibido"
@@ -165,5 +170,21 @@ export const postPedidos = async (req, res) => {
             mensaje: "Error al grabar pedido en base de datos"
         })
         return
+    }
+}
+
+export const listaPedidos = async () => {
+    console.log("--> controlador listaPedidos en ejecucion");
+    try {
+        // leer los pedidos de la BD
+        const pedidos = "llamar servicio"
+        // con los pedidos crear la vista
+        const vista = "llamar motor de vista pasando->(pedidos)"
+        // enviar vista al usuario
+        res.send(vista);
+    } catch (error) {
+        console.log("Error en listaPedidos", error.message);
+        res.status(503).send("Ups, ocurrio un error");
+        return;
     }
 }

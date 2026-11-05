@@ -69,3 +69,17 @@ export const deleteProducto = async(id) => {
         throw new Error("Error en servicio eliminarProducto");
     }
 }
+
+export const crearPedido = async(pedido) => {
+    console.log("--> servicio crearPedido en ejecucion");
+    try {
+        // Grabar pedido en la BD
+        const respuesta = await configDatabase.query(`INSERT INTO pedidos (nombre, contacto, productos) 
+        VALUES ("${pedido.nombre}", "${pedido.contacto}", '${JSON.stringify(pedido.productos)}')`);
+        console.log(respuesta);
+        return respuesta;
+    } catch (error) {
+        console.error("Error en servicio crearPedido", error.message);
+        throw new Error("Error en servicio crearPedido");
+    }
+}
