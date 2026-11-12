@@ -83,3 +83,13 @@ export const crearPedido = async(pedido) => {
         throw new Error("Error en servicio crearPedido");
     }
 }
+
+export const getPedidos = async () => {
+    try {
+        const pedidos = await configDatabase.query(`SELECT * FROM pedidos`);
+        return pedidos;
+    } catch (error) {
+        console.error("Error en la query" + error.message);
+        throw new Error("Error en query a la BD");
+    }
+}

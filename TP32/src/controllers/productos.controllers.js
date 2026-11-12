@@ -173,13 +173,13 @@ export const postPedidos = async (req, res) => {
     }
 }
 
-export const listaPedidos = async () => {
+export const listaPedidos = async (req, res) => {
     console.log("--> controlador listaPedidos en ejecucion");
     try {
         // leer los pedidos de la BD
-        const pedidos = "llamar servicio"
+        const pedidos = await serviciosProductos.getPedidos();
         // con los pedidos crear la vista
-        const vista = "llamar motor de vista pasando->(pedidos)"
+        const vista = vistasProductos.vistaPedidosLista(pedidos[0]);
         // enviar vista al usuario
         res.send(vista);
     } catch (error) {

@@ -99,16 +99,20 @@ header{
     display: flex;
     justify-content: space-between;
 }
-.tablaProductos{
+.tablaProductos,
+.tablaPedidos{
     border-collapse: collapse;
     width: 100%;
 }
 .tablaProductos th, 
-.tablaProductos td{
+.tablaProductos td,
+.tablaPedidos th, 
+.tablaPedidos td{
     border: 1px solid black;
     padding: 0.5em;
 }
-.tablaProductos th{
+.tablaProductos th,
+.tablaPedidos th{
     background-color: var(--color-primario);
     color: var(--color-blanco);
 }
